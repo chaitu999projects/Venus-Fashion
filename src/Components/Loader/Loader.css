@@ -1,0 +1,88 @@
+/* Fashion-themed Loader */
+.fashion-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f8f3f0; /* Soft beige background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .brand-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    color: #2c2c2c;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .brand-logo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #d4af73; /* Gold accent */
+  }
+  
+  .loading-bar {
+    width: 300px;
+    height: 2px;
+    background: #e0e0e0;
+    margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #d4af73, #a2836e);
+    animation: loading 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes loading {
+    0% { width: 0; left: 0; }
+    50% { width: 100%; left: 0; }
+    100% { width: 0; left: 100%; }
+  }
+  
+  .fashion-spinner {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .spinner-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #d4af73;
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  
+  .spinner-circle:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .spinner-circle:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+  }

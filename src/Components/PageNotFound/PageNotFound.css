@@ -1,0 +1,11 @@
+* {
+    inset: 0;
+}
+
+.main-container {
+    background-image: url('https://dinahosting.com/blog/upload/2021/03/error-404.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+}

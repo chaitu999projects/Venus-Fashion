@@ -3,7 +3,6 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 //import {Services}  from "../ServicesSection/Services";
 
-
 const Home = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -46,7 +45,7 @@ const Home = ({ items }) => {
                 backgroundPosition: "center",
               }}
             >
-              <div className="flex flex-col justify-center items-center mb-3">
+              {/* <div className="flex flex-col justify-center items-center mb-3">
                 <h1 className="text-6xl md:text-6xl lg:text-9xl text-center text-white font-bold tracking-wider ">
                   {item.title}
                 </h1>
@@ -58,6 +57,25 @@ const Home = ({ items }) => {
                     Shop Mens
                   </Link>
                 </div>
+              </div> */}
+              <div className="flex flex-col justify-center items-center mb-3 w-full px-4">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center text-white font-bold tracking-wider">
+                  {item.title}
+                </h1>
+                <div className="flex flex-col sm:flex-row gap-4 my-6 sm:my-8 md:my-10 w-full max-w-md sm:max-w-none justify-center">
+                  <Link
+                    to="/womens"
+                    className="transition-all duration-300 cursor-pointer w-full sm:w-40 md:w-48 lg:w-56 p-2 border-2 border-white bg-transparent hover:bg-white font-bold uppercase tracking-wider text-white hover:text-black text-center text-sm sm:text-base"
+                  >
+                    Shop Women
+                  </Link>
+                  <Link
+                    to="/mens"
+                    className="transition-all duration-300 cursor-pointer w-full sm:w-40 md:w-48 lg:w-56 p-2 border-2 border-white bg-transparent hover:bg-white font-bold uppercase tracking-wider text-white hover:text-black text-center text-sm sm:text-base"
+                  >
+                    Shop Men
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
@@ -67,9 +85,7 @@ const Home = ({ items }) => {
   );
 };
 
-
 export default function App() {
- 
   const carouselItems = [
     {
       title: "VENUS",
@@ -88,10 +104,9 @@ export default function App() {
     },
   ];
 
-  return(
+  return (
     <>
-    <Home items={carouselItems} />;
+      <Home items={carouselItems} />;
     </>
-  ) 
-  
+  );
 }

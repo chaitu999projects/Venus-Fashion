@@ -167,7 +167,7 @@ const Mens = ({ items }) => {
                   {item.title}
                 </h1>
                 <div className="flex my-6 md:my-10">
-                  <button className="cursor-pointer w-[150px] sm:w-[180px] p-2 border mx-2 bg-slate-50 font-bold uppercase tracking-wider transition hover:bg-black text-black hover:text-white hover:border-0">
+                  <button className="transition-all duration-300 cursor-pointer w-full sm:w-40 md:w-48 lg:w-56 p-2 border-2 border-white bg-transparent hover:bg-white font-bold uppercase tracking-wider text-white hover:text-black text-center text-sm sm:text-base">
                     Shop Mens
                   </button>
                 </div>

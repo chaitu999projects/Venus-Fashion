@@ -38,22 +38,23 @@ const WomennBrands = () => {
       <div>
         <div className="flex flex-wrap">
           {womensWare.map((item) => (
-            <div
+            <Link
+              to={item.path}
               key={item.id}
-              className="w-full sm:w-1/2 md:w-1/4 p-3 flex justify-center items-end cursor-pointer shodow-lg"
               style={{
                 backgroundImage: `url(${item.url})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: "500px",
               }}
+              className="w-full sm:w-1/2 md:w-1/4 p-3 flex justify-center items-end cursor-pointer shodow-lg"
             >
               <div>
-                <Link to={item.path}>
+                <div>
                   <img src={item.title} alt="brands" className="w-[270px]" />
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

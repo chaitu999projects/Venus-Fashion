@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect, useCallback } from "react";
-
+import { Link } from "react-router-dom";
+import ProductData from '../ProductData/ProductData'
 
 const Adidas = ({ items }) => {
   const [products, setProducts] = useState([
@@ -215,11 +216,13 @@ const Adidas = ({ items }) => {
           >
             {/* Image */}
             <div className="h-[400px] md:h-[500px] sm:h-72 overflow-hidden">
+              <Link to={`/productdetails/adidas/${item.id}`}>
               <img
                 src={item.url}
                 alt={item.name || "Product"}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
+              </Link>
             </div>
 
             {/* Card Body */}

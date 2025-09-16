@@ -31,7 +31,7 @@ const Routings = () => {
           <Route path="/asosmen" element={<AsosMen />} />
           <Route path="/mangomen" element={<MangoMen />} />
           <Route path="/topshopmen" element={<TopshopMen />} />
-          <Route path="/brand/:brand" element={<BrandProducts />} />
+{/*           <Route path="/brand/:brand" element={<BrandProducts />} /> */}
           <Route path='/productdetails/:brand/:id' element={<ProductDetails />} />
 
           <Route path='*' element={<PageNotFound />} />
